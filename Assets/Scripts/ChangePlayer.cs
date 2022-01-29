@@ -4,30 +4,46 @@ using UnityEngine;
 
 public class ChangePlayer : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
     public Sprite Knight;
     public Sprite Frog;
+    
+    private SpriteRenderer spriteRenderer;
+    private enum State {Frog, Knight};
+    State pState;
 
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        SetFrog();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space)){ChangeSprite();}
+        if (Input.GetKeyDown(KeyCode.Space)){ChangeState();}
+        Debug.Log(pState);
     }
 
-    void ChangeSprite()
+    private void ChangeState()
     {
-        if (spriteRenderer.sprite = Frog)
+        if (pState == State.Frog)
         {
-            spriteRenderer.sprite = Knight;
+            SetKnight();
         }
+        else if(pState == State.Knight)
+        {
+            SetFrog();
+        }
+    }
 
-        if (spriteRenderer.sprite = Knight)
-        {
-            spriteRenderer.sprite = Frog;
-        }
+    void SetFrog()
+    {
+        pState = State.Frog;
+        spriteRenderer.sprite = Frog;
+    }
+
+    void SetKnight()
+    {
+        pState = State.Knight;
+        spriteRenderer.sprite = Knight;
     }
 }
