@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 1978860518}
   - component: {fileID: 1978860517}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Pete's Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,7 +489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3fc0d8ce4795d4096e860f092076db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
   Knight: {fileID: -5711848221618334454, guid: ca4052333315924438208b34f8abac0e, type: 3}
   Frog: {fileID: 2820143329777312509, guid: 5411dc23f1c0ca24d8c65527c6dce8a0, type: 3}
 --- !u!212 &1978860522
