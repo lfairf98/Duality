@@ -30,5 +30,4 @@ public class ChangePlayer : MonoBehaviour
             spriteRenderer.sprite = Frog;
         }
     }
-
 }
