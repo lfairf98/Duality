@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Points : MonoBehaviour
 {
-    public float pts = 0f;
- 
+    float pts = 0f;
+    public Text scoreText;
+
     void Update()
     {
         pts += 50 * Time.deltaTime;
