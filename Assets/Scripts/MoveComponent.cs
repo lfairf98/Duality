@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveComponent : MonoBehaviour
 {
     public float speed;
+    public float jumpStrength;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
 
@@ -32,7 +33,7 @@ public class MoveComponent : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W))
             {
-                moveDirection.y += 1;
+                moveDirection.y += jumpStrength;
             }
 
             if (Input.GetKey(KeyCode.S))
