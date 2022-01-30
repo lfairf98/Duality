@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class Points : MonoBehaviour
 {
-    float pts = 0f;
+    int pts = 0;
+    float ptsDecimal;
     public Text scoreText;
 
     void Update()
     {
-        pts += 50 * Time.deltaTime;
+        ptsDecimal += 50 * Time.deltaTime;
+;       pts = Mathf.RoundToInt(ptsDecimal);
+        
+        scoreText.text = pts.ToString();
         Debug.Log(pts);
     }
 }
